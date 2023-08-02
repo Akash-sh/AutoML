@@ -1,0 +1,207 @@
+2023-08-03 00:03:59,854:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:03:59,854:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:03:59,854:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:03:59,854:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:04:00,701:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/numba/core/decorators.py:262: NumbaDeprecationWarning: [1mnumba.generated_jit is deprecated. Please see the documentation at: https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-generated-jit for more information and advice on a suitable replacement.[0m
+  warnings.warn(msg, NumbaDeprecationWarning)
+
+2023-08-03 00:04:00,723:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/visions/backends/shared/nan_handling.py:51: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def hasna(x: np.ndarray) -> bool:
+
+2023-08-03 00:04:01,258:WARNING:/Users/akashsharma/GitHub/AutoML/app.py:5: DeprecationWarning: `import pandas_profiling` is going to be deprecated by April 1st. Please use `import ydata_profiling` instead.
+  import pandas_profiling
+
+2023-08-03 00:05:48,496:INFO:PyCaret RegressionExperiment
+2023-08-03 00:05:48,496:INFO:Logging name: reg-default-name
+2023-08-03 00:05:48,496:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-08-03 00:05:48,496:INFO:version 3.0.4
+2023-08-03 00:05:48,496:INFO:Initializing setup()
+2023-08-03 00:05:48,496:INFO:self.USI: 3896
+2023-08-03 00:05:48,496:INFO:self._variable_keys: {'gpu_param', 'html_param', '_available_plots', 'y_test', 'transform_target_param', 'exp_name_log', 'y', 'seed', '_ml_usecase', 'fold_generator', 'fold_shuffle_param', 'exp_id', 'logging_param', 'gpu_n_jobs_param', 'log_plots_param', 'X_test', 'fold_groups_param', 'target_param', 'X_train', 'idx', 'y_train', 'pipeline', 'X', 'USI', 'memory', 'n_jobs_param', 'data'}
+2023-08-03 00:05:48,496:INFO:Checking environment
+2023-08-03 00:05:48,496:INFO:python_version: 3.9.17
+2023-08-03 00:05:48,496:INFO:python_build: ('main', 'Jul  5 2023 16:05:27')
+2023-08-03 00:05:48,496:INFO:machine: x86_64
+2023-08-03 00:05:48,562:INFO:platform: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:05:48,563:INFO:Memory: svmem(total=17179869184, available=909099008, percent=94.7, used=1539420160, free=19152896, active=894935040, inactive=888938496, wired=644485120)
+2023-08-03 00:05:48,563:INFO:Physical Core: 10
+2023-08-03 00:05:48,563:INFO:Logical Core: 10
+2023-08-03 00:05:48,563:INFO:Checking libraries
+2023-08-03 00:05:48,563:INFO:System:
+2023-08-03 00:05:48,563:INFO:    python: 3.9.17 (main, Jul  5 2023, 16:05:27)  [Clang 14.0.6 ]
+2023-08-03 00:05:48,564:INFO:executable: /Users/akashsharma/opt/anaconda3/bin/python
+2023-08-03 00:05:48,564:INFO:   machine: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:05:48,564:INFO:PyCaret required dependencies:
+2023-08-03 00:21:46,827:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:21:46,827:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:21:46,827:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:21:46,827:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:21:47,292:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/numba/core/decorators.py:262: NumbaDeprecationWarning: [1mnumba.generated_jit is deprecated. Please see the documentation at: https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-generated-jit for more information and advice on a suitable replacement.[0m
+  warnings.warn(msg, NumbaDeprecationWarning)
+
+2023-08-03 00:21:47,296:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/visions/backends/shared/nan_handling.py:51: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def hasna(x: np.ndarray) -> bool:
+
+2023-08-03 00:21:47,408:WARNING:/Users/akashsharma/GitHub/AutoML/app.py:5: DeprecationWarning: `import pandas_profiling` is going to be deprecated by April 1st. Please use `import ydata_profiling` instead.
+  import pandas_profiling
+
+2023-08-03 00:25:31,511:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:25:31,511:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:25:31,511:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:25:31,511:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:25:32,109:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/numba/core/decorators.py:262: NumbaDeprecationWarning: [1mnumba.generated_jit is deprecated. Please see the documentation at: https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-generated-jit for more information and advice on a suitable replacement.[0m
+  warnings.warn(msg, NumbaDeprecationWarning)
+
+2023-08-03 00:25:32,132:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/visions/backends/shared/nan_handling.py:51: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def hasna(x: np.ndarray) -> bool:
+
+2023-08-03 00:25:32,252:WARNING:/Users/akashsharma/GitHub/AutoML/app.py:5: DeprecationWarning: `import pandas_profiling` is going to be deprecated by April 1st. Please use `import ydata_profiling` instead.
+  import pandas_profiling
+
+2023-08-03 00:25:53,880:INFO:PyCaret RegressionExperiment
+2023-08-03 00:25:53,881:INFO:Logging name: reg-default-name
+2023-08-03 00:25:53,881:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-08-03 00:25:53,881:INFO:version 3.0.4
+2023-08-03 00:25:53,881:INFO:Initializing setup()
+2023-08-03 00:25:53,881:INFO:self.USI: 2ded
+2023-08-03 00:25:53,881:INFO:self._variable_keys: {'target_param', 'y_train', '_ml_usecase', 'y', 'y_test', 'n_jobs_param', 'fold_shuffle_param', 'USI', 'X_train', 'data', 'fold_generator', 'seed', 'html_param', 'fold_groups_param', 'gpu_param', 'gpu_n_jobs_param', 'transform_target_param', 'logging_param', '_available_plots', 'exp_name_log', 'exp_id', 'pipeline', 'X', 'memory', 'log_plots_param', 'idx', 'X_test'}
+2023-08-03 00:25:53,881:INFO:Checking environment
+2023-08-03 00:25:53,881:INFO:python_version: 3.9.17
+2023-08-03 00:25:53,881:INFO:python_build: ('main', 'Jul  5 2023 16:05:27')
+2023-08-03 00:25:53,881:INFO:machine: x86_64
+2023-08-03 00:25:53,945:INFO:platform: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:25:53,946:INFO:Memory: svmem(total=17179869184, available=807419904, percent=95.3, used=1442463744, free=18505728, active=790798336, inactive=787652608, wired=651665408)
+2023-08-03 00:25:53,946:INFO:Physical Core: 10
+2023-08-03 00:25:53,946:INFO:Logical Core: 10
+2023-08-03 00:25:53,946:INFO:Checking libraries
+2023-08-03 00:25:53,946:INFO:System:
+2023-08-03 00:25:53,946:INFO:    python: 3.9.17 (main, Jul  5 2023, 16:05:27)  [Clang 14.0.6 ]
+2023-08-03 00:25:53,946:INFO:executable: /Users/akashsharma/opt/anaconda3/bin/python
+2023-08-03 00:25:53,946:INFO:   machine: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:25:53,946:INFO:PyCaret required dependencies:
+2023-08-03 00:26:31,513:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:26:31,513:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:26:31,513:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:26:31,513:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:26:31,950:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/numba/core/decorators.py:262: NumbaDeprecationWarning: [1mnumba.generated_jit is deprecated. Please see the documentation at: https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-generated-jit for more information and advice on a suitable replacement.[0m
+  warnings.warn(msg, NumbaDeprecationWarning)
+
+2023-08-03 00:26:31,954:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/visions/backends/shared/nan_handling.py:51: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def hasna(x: np.ndarray) -> bool:
+
+2023-08-03 00:26:32,072:WARNING:/Users/akashsharma/GitHub/AutoML/app.py:5: DeprecationWarning: `import pandas_profiling` is going to be deprecated by April 1st. Please use `import ydata_profiling` instead.
+  import pandas_profiling
+
+2023-08-03 00:26:54,565:INFO:PyCaret RegressionExperiment
+2023-08-03 00:26:54,565:INFO:Logging name: reg-default-name
+2023-08-03 00:26:54,565:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-08-03 00:26:54,565:INFO:version 3.0.4
+2023-08-03 00:26:54,565:INFO:Initializing setup()
+2023-08-03 00:26:54,565:INFO:self.USI: bf4a
+2023-08-03 00:26:54,565:INFO:self._variable_keys: {'pipeline', 'exp_id', '_ml_usecase', 'n_jobs_param', 'fold_generator', '_available_plots', 'seed', 'transform_target_param', 'gpu_param', 'data', 'y_train', 'fold_shuffle_param', 'y_test', 'target_param', 'logging_param', 'X', 'y', 'html_param', 'gpu_n_jobs_param', 'idx', 'X_train', 'exp_name_log', 'log_plots_param', 'memory', 'USI', 'fold_groups_param', 'X_test'}
+2023-08-03 00:26:54,565:INFO:Checking environment
+2023-08-03 00:26:54,565:INFO:python_version: 3.9.17
+2023-08-03 00:26:54,565:INFO:python_build: ('main', 'Jul  5 2023 16:05:27')
+2023-08-03 00:26:54,565:INFO:machine: x86_64
+2023-08-03 00:26:54,647:INFO:platform: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:26:54,649:INFO:Memory: svmem(total=17179869184, available=807186432, percent=95.3, used=1444405248, free=11169792, active=799707136, inactive=794955776, wired=644698112)
+2023-08-03 00:26:54,649:INFO:Physical Core: 10
+2023-08-03 00:26:54,649:INFO:Logical Core: 10
+2023-08-03 00:26:54,649:INFO:Checking libraries
+2023-08-03 00:26:54,649:INFO:System:
+2023-08-03 00:26:54,650:INFO:    python: 3.9.17 (main, Jul  5 2023, 16:05:27)  [Clang 14.0.6 ]
+2023-08-03 00:26:54,650:INFO:executable: /Users/akashsharma/opt/anaconda3/bin/python
+2023-08-03 00:26:54,650:INFO:   machine: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:26:54,650:INFO:PyCaret required dependencies:
+2023-08-03 00:28:43,430:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:28:43,432:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:28:43,432:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:28:43,432:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:28:43,992:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/numba/core/decorators.py:262: NumbaDeprecationWarning: [1mnumba.generated_jit is deprecated. Please see the documentation at: https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-generated-jit for more information and advice on a suitable replacement.[0m
+  warnings.warn(msg, NumbaDeprecationWarning)
+
+2023-08-03 00:28:44,008:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/visions/backends/shared/nan_handling.py:51: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def hasna(x: np.ndarray) -> bool:
+
+2023-08-03 00:28:44,131:WARNING:/Users/akashsharma/GitHub/AutoML/app.py:5: DeprecationWarning: `import pandas_profiling` is going to be deprecated by April 1st. Please use `import ydata_profiling` instead.
+  import pandas_profiling
+
+2023-08-03 00:28:53,371:INFO:PyCaret RegressionExperiment
+2023-08-03 00:28:53,371:INFO:Logging name: reg-default-name
+2023-08-03 00:28:53,372:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-08-03 00:28:53,372:INFO:version 3.0.4
+2023-08-03 00:28:53,372:INFO:Initializing setup()
+2023-08-03 00:28:53,372:INFO:self.USI: ac6e
+2023-08-03 00:28:53,372:INFO:self._variable_keys: {'transform_target_param', 'gpu_n_jobs_param', 'y_train', 'exp_id', 'html_param', 'seed', 'y', 'fold_groups_param', 'data', 'gpu_param', 'X_train', 'logging_param', 'target_param', 'pipeline', 'X_test', '_ml_usecase', '_available_plots', 'idx', 'n_jobs_param', 'y_test', 'fold_generator', 'memory', 'log_plots_param', 'exp_name_log', 'fold_shuffle_param', 'USI', 'X'}
+2023-08-03 00:28:53,372:INFO:Checking environment
+2023-08-03 00:28:53,372:INFO:python_version: 3.9.17
+2023-08-03 00:28:53,372:INFO:python_build: ('main', 'Jul  5 2023 16:05:27')
+2023-08-03 00:28:53,372:INFO:machine: x86_64
+2023-08-03 00:28:53,430:INFO:platform: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:28:53,431:INFO:Memory: svmem(total=17179869184, available=924422144, percent=94.6, used=1568337920, free=12365824, active=914321408, inactive=910934016, wired=654016512)
+2023-08-03 00:28:53,431:INFO:Physical Core: 10
+2023-08-03 00:28:53,431:INFO:Logical Core: 10
+2023-08-03 00:28:53,431:INFO:Checking libraries
+2023-08-03 00:28:53,431:INFO:System:
+2023-08-03 00:28:53,431:INFO:    python: 3.9.17 (main, Jul  5 2023, 16:05:27)  [Clang 14.0.6 ]
+2023-08-03 00:28:53,431:INFO:executable: /Users/akashsharma/opt/anaconda3/bin/python
+2023-08-03 00:28:53,431:INFO:   machine: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:28:53,431:INFO:PyCaret required dependencies:
+2023-08-03 00:30:22,219:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:30:22,219:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:30:22,219:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:30:22,219:WARNING:
+'cuml' is a soft dependency and not included in the pycaret installation. Please run: `pip install cuml` to install.
+2023-08-03 00:30:22,720:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/numba/core/decorators.py:262: NumbaDeprecationWarning: [1mnumba.generated_jit is deprecated. Please see the documentation at: https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-generated-jit for more information and advice on a suitable replacement.[0m
+  warnings.warn(msg, NumbaDeprecationWarning)
+
+2023-08-03 00:30:22,733:WARNING:/Users/akashsharma/opt/anaconda3/lib/python3.9/site-packages/visions/backends/shared/nan_handling.py:51: NumbaDeprecationWarning: [1mThe 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.[0m
+  def hasna(x: np.ndarray) -> bool:
+
+2023-08-03 00:30:22,839:WARNING:/Users/akashsharma/GitHub/AutoML/app.py:5: DeprecationWarning: `import pandas_profiling` is going to be deprecated by April 1st. Please use `import ydata_profiling` instead.
+  import pandas_profiling
+
+2023-08-03 00:30:30,487:INFO:PyCaret RegressionExperiment
+2023-08-03 00:30:30,487:INFO:Logging name: reg-default-name
+2023-08-03 00:30:30,487:INFO:ML Usecase: MLUsecase.REGRESSION
+2023-08-03 00:30:30,487:INFO:version 3.0.4
+2023-08-03 00:30:30,487:INFO:Initializing setup()
+2023-08-03 00:30:30,487:INFO:self.USI: c519
+2023-08-03 00:30:30,488:INFO:self._variable_keys: {'_available_plots', 'X_train', 'fold_groups_param', 'pipeline', 'exp_id', 'X', 'html_param', 'fold_shuffle_param', 'y_train', 'logging_param', 'gpu_n_jobs_param', 'exp_name_log', 'fold_generator', 'gpu_param', 'idx', '_ml_usecase', 'memory', 'seed', 'n_jobs_param', 'target_param', 'X_test', 'USI', 'data', 'log_plots_param', 'y_test', 'y', 'transform_target_param'}
+2023-08-03 00:30:30,488:INFO:Checking environment
+2023-08-03 00:30:30,488:INFO:python_version: 3.9.17
+2023-08-03 00:30:30,488:INFO:python_build: ('main', 'Jul  5 2023 16:05:27')
+2023-08-03 00:30:30,488:INFO:machine: x86_64
+2023-08-03 00:30:30,544:INFO:platform: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:30:30,545:INFO:Memory: svmem(total=17179869184, available=924811264, percent=94.6, used=1571512320, free=10944512, active=917336064, inactive=886669312, wired=654176256)
+2023-08-03 00:30:30,545:INFO:Physical Core: 10
+2023-08-03 00:30:30,545:INFO:Logical Core: 10
+2023-08-03 00:30:30,545:INFO:Checking libraries
+2023-08-03 00:30:30,545:INFO:System:
+2023-08-03 00:30:30,545:INFO:    python: 3.9.17 (main, Jul  5 2023, 16:05:27)  [Clang 14.0.6 ]
+2023-08-03 00:30:30,545:INFO:executable: /Users/akashsharma/opt/anaconda3/bin/python
+2023-08-03 00:30:30,545:INFO:   machine: macOS-10.16-x86_64-i386-64bit
+2023-08-03 00:30:30,545:INFO:PyCaret required dependencies:
