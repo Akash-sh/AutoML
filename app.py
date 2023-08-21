@@ -1,180 +1,82 @@
-# App created by Data Professor http://youtube.com/dataprofessor
-# GitHub repo of this app https://github.com/dataprofessor/ml-auto-app
-# Demo of this app https://share.streamlit.io/dataprofessor/ml-auto-app/main/app.py
-
-import streamlit as st
+import numpy as np
 import pandas as pd
-from lazypredict.Supervised import LazyRegressor
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.metrics import mean_squared_error, r2_score
-from sklearn.datasets import load_diabetes
-import matplotlib.pyplot as plt
-import seaborn as sns
-import base64
-import io
-#---------------------------------#
-# Page layout
-## Page expands to full width
-st.set_page_config(page_title='The Machine Learning Algorithm Comparison App',
-    layout='wide')
-#---------------------------------#
-# Model building
-def build_model(df):
-    df = df.loc[:100] # FOR TESTING PURPOSE, COMMENT THIS OUT FOR PRODUCTION
-    X = df.iloc[:,:-1] # Using all column except for the last column as X
-    Y = df.iloc[:,-1] # Selecting the last column as Y
-
-    st.markdown('**1.2. Dataset dimension**')
-    st.write('X')
-    st.info(X.shape)
-    st.write('Y')
-    st.info(Y.shape)
-
-    st.markdown('**1.3. Variable details**:')
-    st.write('X variable (first 20 are shown)')
-    st.info(list(X.columns[:20]))
-    st.write('Y variable')
-    st.info(Y.name)
-
-    # Build lazy model
-    X_train, X_test, Y_train, Y_test = train_test_split(X, Y,test_size = split_size,random_state = seed_number)
-    reg = LazyRegressor(verbose=0,ignore_warnings=False, custom_metric=None)
-    models_train,predictions_train = reg.fit(X_train, X_train, Y_train, Y_train)
-    models_test,predictions_test = reg.fit(X_train, X_test, Y_train, Y_test)
-
-    st.subheader('2. Table of Model Performance')
-
-    st.write('Training set')
-    st.write(predictions_train)
-    st.markdown(filedownload(predictions_train,'training.csv'), unsafe_allow_html=True)
-
-    st.write('Test set')
-    st.write(predictions_test)
-    st.markdown(filedownload(predictions_test,'test.csv'), unsafe_allow_html=True)
-
-    st.subheader('3. Plot of Model Performance (Test set)')
+import streamlit as st
+from annotated_text import annotated_text
+# from pandas_profiling import ProfileReport
+from ydata_profiling import ProfileReport
+from streamlit_pandas_profiling import st_profile_report
 
 
-    with st.markdown('**R-squared**'):
-        # Tall
-        predictions_test["R-Squared"] = [0 if i < 0 else i for i in predictions_test["R-Squared"] ]
-        plt.figure(figsize=(3, 9))
-        sns.set_theme(style="whitegrid")
-        ax1 = sns.barplot(y=predictions_test.index, x="R-Squared", data=predictions_test)
-        ax1.set(xlim=(0, 1))
-    st.markdown(imagedownload(plt,'plot-r2-tall.pdf'), unsafe_allow_html=True)
-        # Wide
-    plt.figure(figsize=(9, 3))
-    sns.set_theme(style="whitegrid")
-    ax1 = sns.barplot(x=predictions_test.index, y="R-Squared", data=predictions_test)
-    ax1.set(ylim=(0, 1))
-    plt.xticks(rotation=90)
-    st.pyplot(plt)
-    st.markdown(imagedownload(plt,'plot-r2-wide.pdf'), unsafe_allow_html=True)
+st.set_page_config(layout="wide")
 
-    with st.markdown('**RMSE (capped at 50)**'):
-        # Tall
-        predictions_test["RMSE"] = [50 if i > 50 else i for i in predictions_test["RMSE"] ]
-        plt.figure(figsize=(3, 9))
-        sns.set_theme(style="whitegrid")
-        ax2 = sns.barplot(y=predictions_test.index, x="RMSE", data=predictions_test)
-    st.markdown(imagedownload(plt,'plot-rmse-tall.pdf'), unsafe_allow_html=True)
-        # Wide
-    plt.figure(figsize=(9, 3))
-    sns.set_theme(style="whitegrid")
-    ax2 = sns.barplot(x=predictions_test.index, y="RMSE", data=predictions_test)
-    plt.xticks(rotation=90)
-    st.pyplot(plt)
-    st.markdown(imagedownload(plt,'plot-rmse-wide.pdf'), unsafe_allow_html=True)
 
-    with st.markdown('**Calculation time**'):
-        # Tall
-        predictions_test["Time Taken"] = [0 if i < 0 else i for i in predictions_test["Time Taken"] ]
-        plt.figure(figsize=(3, 9))
-        sns.set_theme(style="whitegrid")
-        ax3 = sns.barplot(y=predictions_test.index, x="Time Taken", data=predictions_test)
-    st.markdown(imagedownload(plt,'plot-calculation-time-tall.pdf'), unsafe_allow_html=True)
-        # Wide
-    plt.figure(figsize=(9, 3))
-    sns.set_theme(style="whitegrid")
-    ax3 = sns.barplot(x=predictions_test.index, y="Time Taken", data=predictions_test)
-    plt.xticks(rotation=90)
-    st.pyplot(plt)
-    st.markdown(imagedownload(plt,'plot-calculation-time-wide.pdf'), unsafe_allow_html=True)
+# Web App Title
+st.markdown('''
+# **Automated EDA using AutoML**
+            
+Exploratory Data Analysis, a term so fancy it's almost scary for people who just want to learn about their data.\n
+**EDA stands for "Exploratory Data Analysis"**. It's a way to dig into a dataset to understand its main characteristics, patterns, 
+and relationships. Think of it like investigating a puzzle before solving it. EDA involves techniques to visualize data, 
+summarize its key features, and uncover insights that might help you make better decisions or develop further analyses. Sounds so fancy right? Generally you'd require advanced knowledge of Python, Statistics and several visualization tools to be able to achieve this feat.
+But what if could tell you that you conduct your own EDA using your own Dataset, a job apparetnly only reserved for Data analysts, all on your own with just a simple click?
+''')
+            
+annotated_text(("**Hereby, I introduce you to AutoML, which stands for 'Automated Machine Learning'. I have created this webapp to make all those special terms like Machine Learning and AI available to everyone. With this app, I hope to motivate people to understand the power of Data and how all you need is simple webapp to conduct it.**"," ", "#fea"))
 
-# Download CSV data
-# https://discuss.streamlit.io/t/how-to-download-file-in-streamlit/1806
-def filedownload(df, filename):
-    csv = df.to_csv(index=False)
-    b64 = base64.b64encode(csv.encode()).decode()  # strings <-> bytes conversions
-    href = f'<a href="data:file/csv;base64,{b64}" download={filename}>Download {filename} File</a>'
-    return href
+st.markdown('''This App is created in Streamlit using the **Numpy**, **Pandas** & **pandas-profiling** library.
 
-def imagedownload(plt, filename):
-    s = io.BytesIO()
-    plt.savefig(s, format='pdf', bbox_inches='tight')
-    plt.close()
-    b64 = base64.b64encode(s.getvalue()).decode()  # strings <-> bytes conversions
-    href = f'<a href="data:image/png;base64,{b64}" download={filename}>Download {filename} File</a>'
-    return href
+**Credit:** App built in `Python` + `Streamlit` by :red[**Akash Sharma** ]''')
+        
+st.write(":arrow_forward: Here's how it works: ")
+st.write('1. Upload your CSV file in the sidebar. (Or just to see how it works, you can use the given example Dataset)')
+st.write('2. Wait for the app to load the data and generate the report.')
+st.write('3. You can then visualize the Report by scrolling down as well as Download the report and use it for your own purposes.')
+st.write('---')
 
-#---------------------------------#
-st.write("""
-# The Machine Learning Algorithm Comparison App
-
-In this implementation, the **lazypredict** library is used for building several machine learning models at once.
-
-Developed by: [Data Professor](http://youtube.com/dataprofessor)
-
-""")
-
-#---------------------------------#
-# Sidebar - Collects user input features into dataframe
+# Upload CSV data
 with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
-    st.sidebar.markdown("""
-[Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
-""")
-
-# Sidebar - Specify parameter settings
-with st.sidebar.header('2. Set Parameters'):
-    split_size = st.sidebar.slider('Data split ratio (% for Training Set)', 10, 90, 80, 5)
-    seed_number = st.sidebar.slider('Set the random seed number', 1, 100, 42, 1)
-
-
-#---------------------------------#
-# Main panel
-
-# Displays the dataset
-st.subheader('1. Dataset')
-
+st.sidebar.subheader("Or Use an Example Dataset :point_down:")
+                        
+# Pandas Profiling Report
 if uploaded_file is not None:
-    df = pd.read_csv(uploaded_file)
-    st.markdown('**1.1. Glimpse of dataset**')
+    @st.cache_data
+    def load_csv():
+        csv = pd.read_csv(uploaded_file)
+        return csv
+    df = load_csv()
+    pr = ProfileReport(df, explorative=True)
+    st.header('**Input DataFrame**')
     st.write(df)
-    build_model(df)
+    st.write('---')
+    st.header('**Analysis Report**')
+    st_profile_report(pr)
+
+    export=pr.to_html()
+    st.sidebar.write('---')
+    st.sidebar.subheader('Download your Report :point_down:')
+    st.sidebar.download_button(label="Download here", data=export, file_name='report.html')
+
 else:
     st.info('Awaiting for CSV file to be uploaded.')
-    if st.button('Press to use Example Dataset'):
-        # Diabetes dataset
-        #diabetes = load_diabetes()
-        #X = pd.DataFrame(diabetes.data, columns=diabetes.feature_names)
-        #Y = pd.Series(diabetes.target, name='response')
-        #df = pd.concat( [X,Y], axis=1 )
+    if st.sidebar.button('Press to use Example Dataset'):
+        # Example data
+        @st.cache_data
+        def load_data():
+            df = pd.read_csv('Top_1000_Companies_Dataset.csv')
+            return df
+        df = load_data()
 
-        #st.markdown('The Diabetes dataset is used as the example.')
-        #st.write(df.head(5))
+        with   st.sidebar.expander("About the example Dataset"):
+            st.write("This comprehensive dataset contains informations about 'Top 1000 Companies' and can be used to analyze, visualize, and model the performance and characteristics of the top 1000 companies across various industries.")
+        pr = ProfileReport(df, explorative=True)
+        st.header('**Input DataFrame**')
+        st.write(df)
+        st.write('---')
+        st.header('**Analysis Report**')
+        st_profile_report(pr)
 
-        # Boston housing dataset
-        boston = load_diabetes()
-        #X = pd.DataFrame(boston.data, columns=boston.feature_names)
-        #Y = pd.Series(boston.target, name='response')
-        X = pd.DataFrame(boston.data, columns=boston.feature_names).loc[:100] # FOR TESTING PURPOSE, COMMENT THIS OUT FOR PRODUCTION
-        Y = pd.Series(boston.target, name='response').loc[:100] # FOR TESTING PURPOSE, COMMENT THIS OUT FOR PRODUCTION
-        df = pd.concat( [X,Y], axis=1 )
-
-        st.markdown('The Boston housing dataset is used as the example.')
-        st.write(df.head(5))
-
-        build_model(df)
+        export=pr.to_html()
+        st.sidebar.write('---')
+        st.sidebar.subheader('Download your Report :point_down:')
+        st.sidebar.download_button(label="Download here", data=export, file_name='report.html')
