@@ -21,7 +21,7 @@ summarize its key features, and uncover insights that might help you make better
 But what if could tell you that you conduct your own EDA using your own Dataset, a job apparetnly only reserved for Data analysts, all on your own with just a simple click?
 ''')
             
-st.text("**Hereby, I introduce you to AutoML, which stands for 'Automated Machine Learning'. I have created this webapp to make all those special terms like Machine Learning and AI available to everyone. With this app, I hope to motivate people to understand the power of Data and how all you need is simple webapp to conduct it.**")
+st.subheader("**Hereby, I introduce you to AutoML, which stands for 'Automated Machine Learning'. I have created this webapp to make all those special terms like Machine Learning and AI available to everyone. With this app, I hope to motivate people to understand the power of Data and how all you need is simple webapp to conduct it.**")
 
 st.markdown('''This App is created in Streamlit using the **Numpy**, **Pandas** & **pandas-profiling** library.
 
